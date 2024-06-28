@@ -26,3 +26,11 @@
 
 ## 6. R1, R4, R8, R9에 username 설정
 - 각 라우터의 **configuration 모드** 에서 **username {라우터의 hostname} password Skills39@@** 로 설정
+
+## 7. R5의 정보 확인
+- R4에서 R5와 연결된 시리얼 포트(**Serial 0/0/0 or Serial 0/0/1**)로 들어가서 **cdp enable** 로 cdp 활성화
+- 그리고 나서 **configuration 모드** 에서 **cdp run** 입력
+- 마지막으로 **privilege 모드** 에서 **show cdp neighbors** 과 **show cdp neighbors detail** 입력해서 R5의 정보 확인
+
+## 8. 모든 시리얼 포트의 clock rate 는 64000
+- 라우터와 연결된 모든 시리얼 포트로 들어가서 **clock rate 64000** 입력
