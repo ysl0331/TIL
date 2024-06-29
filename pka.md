@@ -219,3 +219,10 @@ R6(config)#
 
 (여기서 알아서 비밀번호 설정하세요)
 
+## 16. login block
+
+R3>enable
+
+R3#configure terminal
+
+R3(config)#**login block-for 30 attempts 3 within 60**
