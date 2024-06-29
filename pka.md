@@ -181,6 +181,18 @@ R1#configure terminal
 
 ## 13. WAN 설정
 
+ex)
+
+R8>enable
+
+R8#configure terminal
+
+R8(config)#interface Serial 0/0/1
+
+R8(config-if)#**encapsulation ppp**
+
+R8(config-if)#**ppp authentication chap**
+
 ## 14. port security
 
 SW6>enable
@@ -190,4 +202,20 @@ SW6#configure terminal
 SW6(config)#interface fastEthernet 0/2
 
 SW6(config-if)#**switchport port-security violation shutdown**
+
+## 15. R6 비밀번호 복구
+
+- 일단 R6 라우터의 전원을 껐다 킨 다음 **ctrl + pause/break** 키로 rommon 모드 진입
+
+rommon1 > **confreg 0x42**
+rommon2 > **boot**
+
+- 부팅이 끝나면 라우터는 초기화 상태임
+
+Router>enable
+Router#**copy startup-config running-config**
+R6#configure terminal
+R6(config)#
+
+(여기서 알아서 비밀번호 설정하세요)
 
