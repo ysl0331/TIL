@@ -201,6 +201,8 @@ SW6#configure terminal
 
 SW6(config)#interface fastEthernet 0/2
 
+SW6(config-if)#**switchport port-security**
+
 SW6(config-if)#**switchport port-security violation shutdown**
 
 ## 15. R6 비밀번호 복구
